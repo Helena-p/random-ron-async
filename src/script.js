@@ -13,11 +13,11 @@ async function getQuote() {
             "https://ron-swanson-quotes.herokuapp.com/v2/quotes"
         );
         // check response value to be true
-        if (!response.ok) {
-            throw response.status;
-        }
+        if (!response.ok) throw response.status;
 
+        // Get Json data from response
         let data = await response.json();
+        if (!data) throw "No data!";
 
         // If list of quotes exceed 49, remove the first quote
         if (quotes.length > 49) {
