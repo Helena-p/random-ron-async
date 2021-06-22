@@ -42,6 +42,9 @@ async function getQuote() {
     }
 }
 
+// Run function getQuote on page load
+// and diplay quote to user
 getQuote();
 
+// Fetch new quote when user click on button
 quoteBtn.addEventListener("click", getQuote);
