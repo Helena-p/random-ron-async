@@ -34,5 +34,5 @@ const getQuote = async (event) => {
     }
 };
 
-window.addEventListener("load", getQuote);
+getQuote();
 button.addEventListener("click", getQuote);
